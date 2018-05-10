@@ -30,9 +30,15 @@
 			<h2>{{ timeout.message }}</h2>
 		</div>
 
+		<div ng-controller="BeatlesController as ctrl">
+			<h1>ng-repeat</h1>
+			<p ng-repeat="member in ctrl.bandMembers">{{ member }}</p>
+		</div>
+
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 		<script src="module.js"></script>
 		<script src="testController.js"></script>
 		<script src="timeoutController.js"></script>
+		<script src="beatlesController.js"></script>
 	</body>
 </html>
