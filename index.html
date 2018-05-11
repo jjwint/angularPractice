@@ -31,14 +31,20 @@
 		</div>
 
 		<div ng-controller="BeatlesController as ctrl">
-			<h1>ng-repeat</h1>
+			<h1>Repeating an Array of Strings</h1>
 			<p ng-repeat="member in ctrl.bandMembers">{{ member }}</p>
+		</div>
+		<div ng-controller="FamilyController as ctrl">
+			<h1>Repeating an Array of Objects</h1>
+			<p>{{ ctrl.message }}</p>
+			<p ng-repeat="member in ctrl.familyMembers">{{ member.name }} is my {{ member.relation }}, and is {{ member.age }} years old.</p>
 		</div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 		<script src="module.js"></script>
-		<script src="testController.js"></script>
-		<script src="timeoutController.js"></script>
-		<script src="beatlesController.js"></script>
+		<script src="Controllers/testController.js"></script>
+		<script src="Controllers/timeoutController.js"></script>
+		<script src="Controllers/beatlesController.js"></script>
+		<script src="Controllers/familyController.js"></script>
 	</body>
 </html>
