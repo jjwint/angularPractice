@@ -39,6 +39,10 @@
 			<p>{{ ctrl.message }}</p>
 			<p ng-repeat="member in ctrl.familyMembers">{{ member.name }} is my {{ member.relation }}, and is {{ member.age }} years old.</p>
 		</div>
+		<div ng-controller="BeatlesController as ctrl">
+			<h1>Filters</h1>
+			<p ng-repeat="member in ctrl.bandMembers | orderBy">{{ member | uppercase }}</p>
+		</div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 		<script src="module.js"></script>
